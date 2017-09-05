@@ -7,26 +7,36 @@
  */
 public class Calculate {
 	public static int square(int x) {
-		return x*x;
-		
+		return x*x;	//This squares an input of 'x'
 	}
 	public static int cube(int num) {
-		return num*num*num;
+		return num*num*num; //This cubes the input of 'num
 	}
 	public static double average(double num1 , double num2 ) {
-		return (num1+num2)/2;
+		return (num1+num2)/2; //Average out two inputs
 	}
 	public static double average(double num1,double num2,double num3) {
-		return (num1+num2+num3)/3;
+		return (num1+num2+num3)/3;//Averages out 3 inputs
 	}
 	public static double toDegrees(double rad) {
-		return (180*rad)/3.14159;
+		return (180*rad)/3.14159;//Converts input(which should be a double and a radian) to a degree of an angle 
 	}
 	public static double toRadians(double degrees) {
-		return (degrees*3.14159)/180;
+		return (degrees*3.14159)/180;//Does the samething as toDegrees but converts to Radian
 	}
 	public static double discrminant(double a, double b, double c) {
-		return (b*b)-(4*a*c);
+		return (b*b)-(4*a*c);//Returns the discrminant in a quadratic using the inputs of 'a','b','c'
+	}
+	public static String toImproperFrac(int x, int y, int z) {
+		int numerator = (x*z)+y;
+		String frac= numerator +"/"+ z;
+		return frac; //Converts a Mixed Fraction into an Improper Fraction
+	}
+	public static String toMixedNum(int num, int den ) {
+			int modOfFrac = num % den;
+			int wholeNum = num/den;
+			String mixedNum = wholeNum+" "+modOfFrac+"/"+den;
+			return mixedNum;//Converts an Improper Fraction into a Mixed Fractions
 	}
 
 }
