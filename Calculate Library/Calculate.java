@@ -2,7 +2,7 @@
  * @author derfelTerciano
  * @version 0.1
  * 
- * does math and operations
+ * does calculations and operations
  * does not actually print anything.
  */
 public class Calculate {
