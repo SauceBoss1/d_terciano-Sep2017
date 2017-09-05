@@ -6,8 +6,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		int x= Calculate.square(3);
-		System.out.println(x);
+		System.out.println(Calculate.square(3));
 
 	}
 
