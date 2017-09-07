@@ -44,7 +44,7 @@ public class Calculate {
 		int inside= b*c;
 		int last= b*d;
 		int bx= outside+inside;
-		String binom=first+x+"^2 "+"+ "+bx+x+" "+last;
+		String binom=first+x+"^2 "+"+ "+bx+x+" + "+last;
 		return binom;
 	}
 
