@@ -45,7 +45,12 @@ public class Calculate {
 		int last= b*d;
 		int bx= outside+inside;
 		String binom=first+x+"^2 "+"+ "+bx+x+" + "+last;
-		return binom;
+		String binom2=first+x+"^2 "+"+ "+bx+x+" - "+(last*-1);
+		if (last>0) {
+			return binom;
+		} else {
+			return binom2;
+		}
 	}
 
 }
