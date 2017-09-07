@@ -52,5 +52,12 @@ public class Calculate {
 			return binom2;
 		}
 	}
+	public static boolean isDivisbleBy(int a, int b) {
+		if (a%b==0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }
