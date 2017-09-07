@@ -24,7 +24,7 @@ public class Calculate {
 	public static double toRadians(double degrees) {
 		return (degrees*3.14159)/180;//Does the samething as toDegrees but converts to Radian
 	}
-	public static double discrminant(double a, double b, double c) {
+	public static double discriminant(double a, double b, double c) {
 		return (b*b)-(4*a*c);//Returns the discrminant in a quadratic using the inputs of 'a','b','c'
 	}
 	public static String toImproperFrac(int x, int y, int z) {
@@ -37,6 +37,15 @@ public class Calculate {
 			int wholeNum = num/den;
 			String mixedNum = wholeNum+" "+modOfFrac+"/"+den;
 			return mixedNum;//Converts an Improper Fraction into a Mixed Fractions
+	}
+	public static String foil(int a, int b, int c, int d, String x) {
+		int first = a*c;
+		int outside= a*d;
+		int inside= b*c;
+		int last= b*d;
+		int bx= outside+inside;
+		String binom=first+x+"^2 "+"+ "+bx+x+" "+last;
+		return binom;
 	}
 
 }
