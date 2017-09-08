@@ -49,15 +49,46 @@ public class Calculate {
 		if (last>0) {
 			return binom;
 		} else {
-			return binom2;
+			return binom2;//FOILs the inputs
 		}
 	}
-	public static boolean isDivisbleBy(int a, int b) {
+	public static boolean isDivisibleBy(int a, int b) {
 		if (a%b==0) {
 			return true;
 		} else {
-			return false;
+			return false;//Checks if inputs are divisible to each other
 		}
 	}
-
+	public static double absValue(double num) {
+		if (num<0) {
+			return num*-1;
+		}else {
+			return num;
+		}
+	}
+	public static double max(double num1, double num2) {
+		if (num1>num2) {
+			return num1;
+		} else {
+			return num2;
+		}
+	}
+	public static double max(double num1, double num2, double num3) {
+		if (num1>num2 & num1>num3) {
+			return num1;
+		}else if (num2>num1 & num2>num3) {
+			return num2;
+		} else if (num3>num2 & num3>num1) {
+			return num3;
+		} else {
+			return num1;//returns max of three doubles
+		}
+	}
+	public static int min(int num1, int num2) {
+		if (num2<num1) {
+			return num2;
+		} else {
+			return num1;// returns the minimum of a number(integer)
+		}
+	}
 }
