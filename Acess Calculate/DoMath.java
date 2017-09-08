@@ -6,8 +6,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		System.out.println(Calculate.toDegrees(3));
-		System.out.println(Calculate.foil(1, 2, 1, 2, "f"));
+		System.out.println(Calculate.min(-15,10));
 	}
 
 }
