@@ -91,4 +91,9 @@ public class Calculate {
 			return num1;// returns the minimum of a number(integer)
 		}
 	}
+	public static double round2(double num) {
+		int wholNum = (int) num;
+		double decimal1 = (double) wholNum-num;
+		return num;
+	}
 }
