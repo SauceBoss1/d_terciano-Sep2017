@@ -92,8 +92,18 @@ public class Calculate {
 		}
 	}
 	public static double round2(double num) {
-		int wholNum = (int) num;
-		double decimal1 = (double) wholNum-num;
-		return num;
+		double convert2hun=num*=100;
+		double convert2int= (int) num*100;
+		double decimal = convert2hun-convert2int;
+		if (decimal<0.5) {
+			convert2int += 1;
+			double convert2deci = (double) convert2int/100;
+			return convert2deci;
+		} else {
+			double convert2deci = (double) convert2int/100;
+			return convert2deci;
+		}
+		
+		
 	}
 }
