@@ -92,20 +92,14 @@ public class Calculate {
 		}
 	}
 	public static double round2(double num) {
-		//come back to this
-		double convert2hun=num*100;
-		int convert2int= (int)convert2hun;
-		double int2dub = (double) convert2int;
-		double decimal = convert2hun-int2dub;
-		return decimal;
-/*		if (decimal<0.5) {
-			convert2int += 1.0;
-			double convert2deci = (double) convert2int/100;
-			return convert2deci/100;
+		double x=(num-num%0.0001)*1000;
+		if(x%10>=5) {
+			x+=10;
+			return x/1000;
 		} else {
-			double convert2deci = (double) convert2int/100;
-		return convert2deci/11; */
-		//}		
+		
+
+
 		
 	}
 }
