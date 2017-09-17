@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 /*
  * @author derfelTerciano
  * @version 0.1
@@ -107,7 +108,7 @@ public class Calculate {
 	}
 
 	public static double round2(double num) {
-		double x = (num - num % 0.0001) * 1000;
+		double x = (num - num % 0.001) * 1000;
 		if (x % 10 >= 5) {
 			x += 10;
 			return x / 1000;
@@ -135,4 +136,42 @@ public class Calculate {
 		return ans;
 	}
 
+	public static boolean isPrime(int num) {
+		for (int i = 2; i < num; i++) {
+			if (isDivisibleBy(num, i) == true) {
+				return false;
+			}
+		}
+		return true;
+
+	}
+
+	public static int gcf(int num1, int num2) {
+		if (isPrime(num1) && isPrime(num2)) {
+			return 1;
+		}
+		while (num1 != 0 && num2 != 0) {
+			int num3 = num2;
+			num2 = num1%num2;
+			num1=num3;
+		}
+		return num1+num2;
+	}
+	
+	public static double sqrt(double x) {
+		double sqrRoot = 0;
+		double temp =0;
+		temp = x/2;
+		while ( x > 0.0) {
+			sqrRoot = temp - (temp*temp - x)/(2*temp);
+			double value=0;
+			value = ((temp - sqrRoot)<0) ? value:-value; 
+			if (value < .0001) {
+				x= sqrRoot;
+			} else {
+				temp =sqrRoot;
+			}
+		}
+		return x;
+	}
 }
