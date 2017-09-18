@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 /*
  * @author derfelTerciano
  * @version 0.1
@@ -174,4 +173,4 @@ public class Calculate {
 		}
 		return x;
 	}
-}
+}//end
