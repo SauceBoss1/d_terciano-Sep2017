@@ -110,9 +110,9 @@ public class Calculate {
 		double x = (num - num % 0.001) * 1000;
 		if (x % 10 >= 5) {
 			x += 10;
-			return x / 1000;
+			return (x-x%10) / 1000;
 		} else {
-			return x / 1000;
+			return (x-x%10) / 1000;
 		}
 
 	}
