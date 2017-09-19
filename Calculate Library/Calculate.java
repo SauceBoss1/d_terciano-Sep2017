@@ -173,4 +173,4 @@ public class Calculate {
 		}
 		return x;
 	}
-}//end
+}//end of program
