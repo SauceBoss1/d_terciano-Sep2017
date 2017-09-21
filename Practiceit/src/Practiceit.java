@@ -44,9 +44,41 @@ public class Practiceit {
 			return "Fall";
 		}
 	}
+	public static void sequence() {
+		for (int i= 1; i <= 2; i++) {
+			for (int j=1;j<=3;j++) {
+				for (int k=1; k<=4; k++) {
+					System.out.print("*");
+				}
+				System.out.print("!");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static final int MAX=5;
+	public static void unknown() {
+		int number =0;
+		for (int count = MAX; count >=1; count --) {
+			number += (count*count);
+		}
+		System.out.println("The result is: "+ number);
+	}
+	public static String swapPairs(String str) {
+	    char[] arr = str.toCharArray();
+	    
+	    for(int i = 0; i <= arr.length - 2; i += 2) {
+	        char temp = arr[i];
+	        arr[i] = arr[i+1];
+	        arr[i+1] = temp;
+	    }
+	    
+	    return new String(arr);
+	}
 
 	public static void main(String[] args) {
-		System.out.println(season(12,25));
+		swapPairs("hello there");
+		
 	}
 }
 
