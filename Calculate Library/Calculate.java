@@ -64,6 +64,9 @@ public class Calculate {
 	}
 
 	public static boolean isDivisibleBy(int a, int b) {
+		if (b==0) {
+			throw new IllegalArgumentException("You can't divide by zero!");
+		}
 		if (a % b == 0) {
 			return true;
 		} else {
@@ -119,6 +122,9 @@ public class Calculate {
 	}
 
 	public static double exponent(double base, int power) {
+		if (power <0) {
+			throw new IllegalArgumentException("I currently support negatives.");
+		}
 		double ans = 1;
 		for (int i = 0; i < power; i++) {
 			ans *= base;
@@ -127,6 +133,9 @@ public class Calculate {
 	}
 
 	public static int factorial(int num) {
+		if (num<0) {
+			throw new IllegalArgumentException("Input must be > or = to 0");
+		}
 		int numSub = num;
 		int ans = 1;
 		for (int i = 0; numSub > 0; i++) {
