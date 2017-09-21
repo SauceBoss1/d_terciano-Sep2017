@@ -160,7 +160,7 @@ public class Calculate {
 	
 	public static double sqrt(double x) {
 		if (x<0) {
-			throw new IllegalArgumentException("You can't sqrt a negative. Use only positive numbers.");
+			throw new IllegalArgumentException("You can't sqrt a negative number. Use only positive numbers.");
 		}
 		double c =x;
 		double t=c;
