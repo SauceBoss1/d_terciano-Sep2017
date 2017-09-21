@@ -1,3 +1,4 @@
+import java.lang.IllegalArgumentException; 
 /*
  * @author derfelTerciano
  * @version 0.1
@@ -158,19 +159,15 @@ public class Calculate {
 	}
 	
 	public static double sqrt(double x) {
-		double sqrRoot = 0;
-		double temp =0;
-		temp = x/2;
-		while ( x > 0.0) {
-			sqrRoot = temp - (temp*temp - x)/(2*temp);
-			double value=0;
-			value = ((temp - sqrRoot)<0) ? value:-value; 
-			if (value < .0001) {
-				x= sqrRoot;
-			} else {
-				temp =sqrRoot;
-			}
+		if (x<0) {
+			throw new IllegalArgumentException("You can't sqrt a negative. Use only positive numbers.");
 		}
-		return x;
+		double c =x;
+		double t=c;
+		double errorTolerance = 1e-15;
+		while ((t-c/t) > errorTolerance *t) {
+			t = (c/t+t)/2.0;
+		}
+		return round2(t);
 	}
 }//end of program
