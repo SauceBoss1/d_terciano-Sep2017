@@ -6,7 +6,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		System.out.println(Calculate.sqrt(-4));
+		System.out.println(Calculate.isDivisibleBy(16,0));
 	}
 
 }
