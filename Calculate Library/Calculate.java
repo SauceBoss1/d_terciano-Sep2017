@@ -1,4 +1,5 @@
-import java.lang.IllegalArgumentException; 
+import java.lang.IllegalArgumentException;
+
 /*
  * @author derfelTerciano
  * @version 0.1
@@ -32,7 +33,11 @@ public class Calculate {
 	}
 
 	public static double discriminant(double a, double b, double c) {
-		return (b * b) - (4 * a * c);// Returns the discrminant in a quadratic using the inputs of 'a','b','c'
+		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
+	}
+
+	public static double discriminant(int a, int b, int c) {
+		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
 	}
 
 	public static String toImproperFrac(int x, int y, int z) {
@@ -64,7 +69,7 @@ public class Calculate {
 	}
 
 	public static boolean isDivisibleBy(int a, int b) {
-		if (b==0) {
+		if (b == 0) {
 			throw new IllegalArgumentException("You can't divide by zero!");
 		}
 		if (a % b == 0) {
@@ -114,15 +119,15 @@ public class Calculate {
 		double x = (num - num % 0.001) * 1000;
 		if (x % 10 >= 5) {
 			x += 10;
-			return (x-x%10) / 1000;
+			return (x - x % 10) / 1000;
 		} else {
-			return (x-x%10) / 1000;
+			return (x - x % 10) / 1000;
 		}
 
 	}
 
 	public static double exponent(double base, int power) {
-		if (power <0) {
+		if (power < 0) {
 			throw new IllegalArgumentException("I currently support negatives.");
 		}
 		double ans = 1;
@@ -133,7 +138,7 @@ public class Calculate {
 	}
 
 	public static int factorial(int num) {
-		if (num<0) {
+		if (num < 0) {
 			throw new IllegalArgumentException("Input must be > or = to 0");
 		}
 		int numSub = num;
@@ -161,22 +166,38 @@ public class Calculate {
 		}
 		while (num1 != 0 && num2 != 0) {
 			int num3 = num2;
-			num2 = num1%num2;
-			num1=num3;
+			num2 = num1 % num2;
+			num1 = num3;
 		}
-		return num1+num2;
+		return num1 + num2;
 	}
-	
+
 	public static double sqrt(double x) {
-		if (x<0) {
+		if (x < 0) {
 			throw new IllegalArgumentException("You can't sqrt a negative number. Use only positive numbers.");
 		}
-		double c =x;
-		double t=c;
+		double c = x;
+		double t = c;
 		double errorTolerance = 1e-15;
-		while ((t-c/t) > errorTolerance *t) {
-			t = (c/t+t)/2.0;
+		while ((t - c / t) > errorTolerance * t) {
+			t = (c / t + t) / 2.0;
 		}
 		return round2(t);
 	}
-}//end of program
+
+	public static String quadForm(int a, int b, int c) {
+		if (discriminant(a,b,c)<0) {
+			return "no real roots";
+		}
+		double plus = round2((-b +sqrt(discriminant(a,b,c)))/(2*a));
+		double minus = round2((-b -sqrt(discriminant(a,b,c)))/(2*a));
+		if (discriminant(a,b,c)==0) {
+			String ans1= plus+"";
+			return ans1;
+		} else {
+			String ans2=plus +" and "+ minus;
+			return ans2;
+		}
+		
+	}
+}// end of program
