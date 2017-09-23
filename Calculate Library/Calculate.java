@@ -128,7 +128,7 @@ public class Calculate {
 
 	public static double exponent(double base, int power) {
 		if (power < 0) {
-			throw new IllegalArgumentException("I currently support negatives.");
+			throw new IllegalArgumentException("I currently don't support negatives.");
 		}
 		double ans = 1;
 		for (int i = 0; i < power; i++) {
@@ -186,6 +186,9 @@ public class Calculate {
 	}
 
 	public static String quadForm(int a, int b, int c) {
+		if(a==0) {
+			throw new IllegalArgumentException("Variable \"a\" must be greater than zero.");
+		}
 		if (discriminant(a,b,c)<0) {
 			return "no real roots";
 		}
