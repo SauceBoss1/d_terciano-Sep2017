@@ -37,7 +37,7 @@ public class Calculate {
 	}
 
 	public static double discriminant(int a, int b, int c) {
-		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
+		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'(overload)
 	}
 
 	public static String toImproperFrac(int x, int y, int z) {
@@ -122,7 +122,7 @@ public class Calculate {
 			return (x - x % 10) / 1000;
 		} else {
 			return (x - x % 10) / 1000;
-		}
+		}//rounds an input
 
 	}
 
@@ -134,7 +134,7 @@ public class Calculate {
 		for (int i = 0; i < power; i++) {
 			ans *= base;
 		}
-		return ans;
+		return ans;//carries the base to the x power
 	}
 
 	public static int factorial(int num) {
@@ -147,7 +147,7 @@ public class Calculate {
 			ans *= numSub;
 			numSub--;
 		}
-		return ans;
+		return ans;//returns the factorial of an input
 	}
 
 	public static boolean isPrime(int num) {
@@ -156,7 +156,7 @@ public class Calculate {
 				return false;
 			}
 		}
-		return true;
+		return true;//checks if a number is prime or not
 
 	}
 
@@ -169,7 +169,7 @@ public class Calculate {
 			num2 = num1 % num2;
 			num1 = num3;
 		}
-		return num1 + num2;
+		return num1 + num2;// finds the greatest common factor of 2 numbers
 	}
 
 	public static double sqrt(double x) {
@@ -182,7 +182,7 @@ public class Calculate {
 		while ((t - c / t) > errorTolerance * t) {
 			t = (c / t + t) / 2.0;
 		}
-		return round2(t);
+		return round2(t);//sqrts the input accurately
 	}
 
 	public static String quadForm(int a, int b, int c) {
@@ -200,7 +200,7 @@ public class Calculate {
 		} else {
 			String ans2=plus +" and "+ minus;
 			return ans2;
-		}
+		}//returns the quadratic formula for 3 inputs
 		
 	}
 }// end of program
