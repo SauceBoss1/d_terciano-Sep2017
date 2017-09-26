@@ -60,6 +60,7 @@ public class Quadratic {
 		String description = a + "x^2 + " + b + "x + " + c;
 		System.out.println("Description of the graph:");
 		System.out.println(description + "\n");
+		
 		// determines if graph is open up or down
 		System.out.print("Opens: ");
 		if (a > 0) {
@@ -67,16 +68,20 @@ public class Quadratic {
 		} else {
 			System.out.println("Down");
 		}
+		
 		// determines axis of symmetry
 		String sym = "Axis of Symmetry: "+ round2(xVertex(a, b));
 		System.out.println(sym);
+		
 		// determines vertex
 		String vertex = "(" + round2(xVertex(a, b)) + "," + round2(yVertex(a, b, c, xVertex(a, b))) + ")";
 		String vertex2 = "Vertex: "+ vertex;
 		System.out.println(vertex2);
+		
 		// determines x-int
 		String xint= "x-intercept: "+ (quadForm(a, b, c));
 		System.out.println(xint);
+		
 		// determines y-int
 		System.out.print("y-intecept: " +c);
 
