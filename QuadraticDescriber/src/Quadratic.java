@@ -1,4 +1,9 @@
-
+/*
+ * Functions for the QuadracClient
+ * version 1
+ * 
+ * created by Derfel Terciano
+ */
 public class Quadratic {
 	public static double discriminant(double a, double b, double c) {
 		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
