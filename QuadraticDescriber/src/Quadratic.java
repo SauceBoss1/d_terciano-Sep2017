@@ -61,11 +61,10 @@ public class Quadratic {
 		System.out.println("Description of the graph:");
 		System.out.println(description + "\n");
 		// determines if graph is open up or down
+		System.out.print("Opens: ");
 		if (a > 0) {
-			System.out.print("Opens: ");
 			System.out.println("Up");
 		} else {
-			System.out.print("Opens: ");
 			System.out.println("Down");
 		}
 		// determines axis of symmetry

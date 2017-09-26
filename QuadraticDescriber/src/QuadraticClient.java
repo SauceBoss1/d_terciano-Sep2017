@@ -8,6 +8,7 @@ public class QuadraticClient {
 		double b = input.nextDouble();
 		System.out.print("Enter value c:");
 		double c = input.nextDouble();
+		System.out.println("\n");
 		Quadratic.quadrDescriber(a, b, c);
 		
 	}
