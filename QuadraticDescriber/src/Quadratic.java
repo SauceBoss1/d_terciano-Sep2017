@@ -69,18 +69,18 @@ public class Quadratic {
 			System.out.println("Down");
 		}
 		// determines axis of symmetry
-		System.out.print("Axis of Symmetry: ");
-		System.out.println(round2(xVertex(a, b)));
+		String sym = "Axis of Symmetry: "+ round2(xVertex(a, b));
+		System.out.println(sym);
 		// determines vertex
-		System.out.print("Vertex: ");
 		String vertex = "(" + round2(xVertex(a, b)) + "," + round2(yVertex(a, b, c, xVertex(a, b))) + ")";
-		System.out.println(vertex);
+		String vertex2 = "Vertex: "+ vertex;
+		System.out.println(vertex2);
 		// determines x-int
-		System.out.print("x-intercept: ");
-		System.out.println(quadForm(a, b, c));
+		String xint= "x-intercept: "+ (quadForm(a, b, c));
+		System.out.println(xint);
 		// determines y-int
-		System.out.print("y-intecept: ");
-		System.out.println(c);
+		System.out.print("y-intecept: " +c);
+
 
 	}
 
