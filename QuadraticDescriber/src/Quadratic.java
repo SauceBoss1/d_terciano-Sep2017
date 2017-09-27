@@ -1,4 +1,4 @@
-/*
+ /*
  * Functions for the QuadracClient
  * version 1
  * 
