@@ -16,6 +16,7 @@ public class QuadraticClient {
 		System.out.println(intro_message);
 		System.out.println(intro_message2);
 		System.out.println("\n"+author+"\n");
+		
 		//main body of the code
 		boolean stop = false;
 		while (stop==false) {
