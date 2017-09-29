@@ -18,22 +18,22 @@ public class QuadraticClient {
 		System.out.println("\n"+author+"\n");
 		
 		//main body of the code
-		boolean stop = false;
+		boolean stop = false;//primes the loop
 		while (stop==false) {
 			System.out.println("Please enter the following coefficents: \n");
 			System.out.print("Enter value a:");
-			double a = input.nextDouble();
+			double a = input.nextDouble();//value a of quadratic
 			System.out.print("Enter value b:");
-			double b = input.nextDouble();
+			double b = input.nextDouble();//value b of quadratic
 			System.out.print("Enter value c:");
-			double c = input.nextDouble();
+			double c = input.nextDouble();//value c of quadratic
 			System.out.println("\n");
 			Quadratic.quadrDescriber(a, b, c);
-			System.out.println("\n\nDo you wish to continue??(y/n)");
+			System.out.println("\n\nDo you wish to continue??(y/n)");//asks if you want to tcontinue
 			String decide = input.next();
-			if ((decide.equals("n"))) {
+			if ((decide.equals("n"))) {//checks if appropriate input is read
 				System.out.println("\nThank you for using this program!");
-				stop = true;
+				stop = true;//ends loop if true
 			}
 			
 		}
