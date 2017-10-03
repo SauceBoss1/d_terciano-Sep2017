@@ -1,5 +1,5 @@
 /*
- * Describes quadratic of 3 user defned inputs
+ * Describes quadratic of 3 user defined inputs
  * 
  * version 1
  * 
