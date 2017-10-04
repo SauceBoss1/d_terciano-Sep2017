@@ -1,3 +1,10 @@
+/*
+ * Processes numbers
+ * 
+ * @author derfelterciano
+ * @version 0.1
+ * 
+ */
 import java.util.*;
 public class ProcessingNumbers {
 	static Scanner input= new Scanner(System.in);
