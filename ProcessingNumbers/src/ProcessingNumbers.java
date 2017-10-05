@@ -26,13 +26,16 @@ public class ProcessingNumbers {
 				if (given > biggestNumEven) {
 					biggestNumEven=given;
 				}
-			}
+			} 
 			if (given < smallestNum) {
 				smallestNum = given;
 			}
 			if (given > biggestNum) {
 				biggestNum=given;
 			}
+		}
+		if (biggestNumEven==-999999999) {
+			biggestNumEven=0;
 		}
 		System.out.println("sum of even numbers: "+result);
 		System.out.println("Biggest Even number: "+ biggestNumEven);
