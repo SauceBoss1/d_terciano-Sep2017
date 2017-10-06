@@ -52,7 +52,7 @@ public class Quadratic {
 	}
 
 	public static double xVertex(double a, double b) {
-		return (-b) / (2 * a);
+		return -b / (2 * a);
 	}
 
 	public static double yVertex(double a, double b, double c, double xVert) {
