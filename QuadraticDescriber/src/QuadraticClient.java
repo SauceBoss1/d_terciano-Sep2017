@@ -30,7 +30,7 @@ public class QuadraticClient {
 			double c = input.nextDouble();//value c of quadratic
 			System.out.println("\n");
 			Quadratic.quadrDescriber(a, b, c);
-			System.out.println("\n\nDo you wish to continue??(y/n)");//asks if you want to tcontinue
+			System.out.print("\n\nDo you wish to continue??(y/n)");//asks if you want to tcontinue
 			String decide = input.next();
 			if ((decide.equals("n"))) {//checks if appropriate input is read
 				System.out.println("\nThank you for using this program!");
