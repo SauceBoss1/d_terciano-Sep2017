@@ -92,7 +92,7 @@ public class Quadratic {
 		String vertex2 = "\nVertex: " + vertex;
 
 		// determines x-int
-		String xint = "\nx-intercept: " + (quadForm(a, b, c));
+		String xint = "\nx-intercept(s): " + (quadForm(a, b, c));
 
 		// determines y-int
 		String yint="\ny-intecept: " + c;
