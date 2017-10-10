@@ -71,35 +71,34 @@ public class Quadratic {
 		return compute;
 	}
 
-	public static void quadrDescriber(double a, double b, double c) {
+	public static String quadrDescriber(double a, double b, double c) {
 		// description
-		String description = a + "x^2 + " + b + "x + " + c;
-		System.out.println("Description of the graph:");
-		System.out.println(description + "\n");
+		String description = "Description of the graph: \n"+a + "x^2 + " + b + "x + " + c;
 
 		// determines if graph is open up or down
-		System.out.print("Opens: ");
+		String upOrDown= "";
 		if (a > 0) {
-			System.out.println("Up");
+			upOrDown=upOrDown+"Up";
 		} else {
-			System.out.println("Down");
+			upOrDown=upOrDown+"Down";
 		}
+		String opening= "\n\nOpens: "+ upOrDown;
 
 		// determines axis of symmetry
-		String sym = "Axis of Symmetry: " + round2(xVertex(a, b));
-		System.out.println(sym);
+		String sym = "\nAxis of Symmetry: " + round2(xVertex(a, b));
 
 		// determines vertex
 		String vertex = "(" + round2(xVertex(a, b)) + "," + round2(yVertex(a, b, c, xVertex(a, b))) + ")";
-		String vertex2 = "Vertex: " + vertex;
-		System.out.println(vertex2);
+		String vertex2 = "\nVertex: " + vertex;
 
 		// determines x-int
-		String xint = "x-intercept: " + (quadForm(a, b, c));
-		System.out.println(xint);
+		String xint = "\nx-intercept: " + (quadForm(a, b, c));
 
 		// determines y-int
-		System.out.print("y-intecept: " + c);
+		String yint="\ny-intecept: " + c;
+		
+		//returns output
+		return description + opening + sym + vertex2+ xint + yint;
 
 	}
 

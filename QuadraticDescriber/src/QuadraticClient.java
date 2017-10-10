@@ -33,7 +33,7 @@ public class QuadraticClient {
 			System.out.println("\n");
 			
 			//describes the quadratic with the inputs
-			Quadratic.quadrDescriber(a, b, c);
+			System.out.println(Quadratic.quadrDescriber(a, b, c));
 			
 			//checks if we should continue program of stop it
 			System.out.print("\n\nDo you wish to continue??(y/n): ");//asks if you want to tcontinue
