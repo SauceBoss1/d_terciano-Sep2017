@@ -1,7 +1,7 @@
 /*
  * Describes quadratic of 3 user defined inputs
  * 
- * version 1
+ * version 1.0
  * 
  * created by Derfel Terciano
  */
