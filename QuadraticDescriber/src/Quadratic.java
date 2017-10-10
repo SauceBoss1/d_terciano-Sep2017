@@ -5,14 +5,25 @@
 * created by Derfel Terciano
 */
 public class Quadratic {
+	public static double absValue(double num) {
+		if (num < 0) {
+			return num * -1;
+		} else {
+			return num;
+		}
+	}
 	public static double discriminant(double a, double b, double c) {
 		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
 	}
 
 	public static double round2(double num) {
 		double x = (num - num % 0.001) * 1000;
-		if (x % 10 >= 5) {
-			x += 10;
+		if (absValue(x % 10) >= 5) {
+			if (num>=0) {
+				x += 10;
+			} else {
+				x -= 10;
+			}
 			return (x - x % 10) / 1000;
 		} else {
 			return (x - x % 10) / 1000;
