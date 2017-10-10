@@ -7,6 +7,7 @@
  */
 import java.util.*;
 public class QuadraticClient {
+	//creates a new scanner object called input
 	static Scanner input = new Scanner(System.in);
 	public static void main(String[] args) {
 		//this part is not that important
