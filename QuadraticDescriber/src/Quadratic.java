@@ -1,6 +1,6 @@
 /*
 * Functions for the QuadracClient
-* version 1.0
+* version 1.00
 * 
 * created by Derfel Terciano
 */
