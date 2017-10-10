@@ -1,8 +1,8 @@
 /*
  * Processes numbers
  * 
- * @author derfelterciano
- * @version 0.1
+ * @author derfel terciano
+ * @version 1.0
  * 
  * 
  * 
