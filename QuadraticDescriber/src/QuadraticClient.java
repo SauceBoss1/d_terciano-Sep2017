@@ -40,7 +40,7 @@ public class QuadraticClient {
 			System.out.println(Quadratic.quadrDescriber(a, b, c));
 
 			// checks if we should continue program of stop it
-			System.out.print("\n\nDo you wish to continue??(y/n): ");// asks if you want to tcontinue
+			System.out.print("\n\nDo you wish to continue??(y/n): ");// asks if you want to continue
 			String decide = input.next();
 			if ((decide.equals("n"))) {// checks if appropriate input is read
 				System.out.println("\nThank you for using this program!");
