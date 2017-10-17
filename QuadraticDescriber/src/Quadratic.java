@@ -5,6 +5,9 @@
 * created by Derfel Terciano
 */
 public class Quadratic {
+	public static double square(double x) {
+		return x * x; // This squares an input of 'x'
+	}
 	public static double absValue(double num) {
 		if (num < 0) {
 			return num * -1;
@@ -67,7 +70,7 @@ public class Quadratic {
 	}
 
 	public static double yVertex(double a, double b, double c, double xVert) {
-		double compute = (a * (xVert * xVert)) + (b * xVert) + c;
+		double compute = (a * (square(xVert))) + (b * xVert) + c;
 		return compute;
 	}
 
