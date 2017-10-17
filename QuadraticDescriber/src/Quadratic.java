@@ -8,13 +8,15 @@ public class Quadratic {
 	public static double square(double x) {
 		return x * x; // This squares an input of 'x'
 	}
+	
 	public static double absValue(double num) {
 		if (num < 0) {
 			return num * -1;
 		} else {
 			return num;
 		}
-	}
+	}//returns the absoulte value of any double
+
 	public static double discriminant(double a, double b, double c) {
 		return (b * b) - (4 * a * c);// Returns the discriminant in a quadratic using the inputs of 'a','b','c'
 	}
@@ -22,7 +24,7 @@ public class Quadratic {
 	public static double round2(double num) {
 		double x = (num - num % 0.001) * 1000;
 		if (absValue(x % 10) >= 5) {
-			if (num>=0) {
+			if (num >= 0) {
 				x += 10;
 			} else {
 				x -= 10;
@@ -74,18 +76,19 @@ public class Quadratic {
 		return compute;
 	}
 
+	//this method is the main part of this class. quadrDescriber will describe the parabola of the inputs a,b,c
 	public static String quadrDescriber(double a, double b, double c) {
 		// description
-		String description = "Description of the graph: \n"+a + "x^2 + " + b + "x + " + c;
+		String description = "Description of the graph: \n" + a + "x^2 + " + b + "x + " + c;
 
 		// determines if graph is open up or down
-		String upOrDown= "";
+		String upOrDown = "";
 		if (a > 0) {
-			upOrDown=upOrDown+"Up";
+			upOrDown = upOrDown + "Up";
 		} else {
-			upOrDown=upOrDown+"Down";
+			upOrDown = upOrDown + "Down";
 		}
-		String opening= "\n\nOpens: "+ upOrDown;
+		String opening = "\n\nOpens: " + upOrDown;
 
 		// determines axis of symmetry
 		String sym = "\nAxis of Symmetry: " + round2(xVertex(a, b));
@@ -98,10 +101,10 @@ public class Quadratic {
 		String xint = "\nx-intercept(s): " + (quadForm(a, b, c));
 
 		// determines y-int
-		String yint="\ny-intecept: " + c;
-		
-		//returns output
-		return description + opening + sym + vertex2+ xint + yint;
+		String yint = "\ny-intecept: " + c;
+
+		// returns output
+		return description + opening + sym + vertex2 + xint + yint;
 
 	}
 
